@@ -1,0 +1,10 @@
+#!/bin/bash
+dir=`dirname $1`
+if [ a$dir = a ] ; then
+	/cygdrive/c/opt/Vim/vim80/gvim $* &
+else
+  fname=`basename $1`
+  cd $dir
+  /cygdrive/c/opt/Vim/vim80/gvim $fname &
+fi
+exit
